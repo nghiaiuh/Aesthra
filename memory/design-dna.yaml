@@ -1,0 +1,50 @@
+# Aesthra Personal Design DNA
+#
+# This file stores personal creative taste separately from general design knowledge (knowledge/).
+# Do not conflate what generally works in a discipline with what you personally prefer.
+#
+# Illustrative sample item format (not active until explicitly approved into a category below):
+#   - id: pref_example_01
+#     category: composition
+#     preference: "Favor asymmetric editorial layouts with unbroken open margin space"
+#     polarity: prefer        # prefer | avoid | neutral
+#     strength: 0.85          # 0.0 to 1.0
+#     sourceFeedbackIds:
+#       - fb_example_01
+#     evidence:
+#       - "Explicitly approved after reviewing reference ref_example"
+#     status: explicit        # explicit | tentative
+#     updatedAt: "2026-11-10T00:00:00.000Z"
+
+schemaVersion: 1
+owner: personal-profile
+note: Personal creative taste profile. Only explicitly approved or stated preferences belong in explicit taste; agent-inferred hypotheses remain tentative until reviewed.
+updatedAt: '2026-11-10T00:00:00.000Z'
+categories:
+  visual_identity:
+    explicit: []
+    tentative: []
+  composition:
+    explicit: []
+    tentative: []
+  typography:
+    explicit: []
+    tentative: []
+  color:
+    explicit: []
+    tentative: []
+  lighting:
+    explicit: []
+    tentative: []
+  motion:
+    explicit: []
+    tentative: []
+  cinematic_language:
+    explicit: []
+    tentative: []
+  creative_influences:
+    explicit: []
+    tentative: []
+  negative_preferences:
+    explicit: []
+    tentative: []
