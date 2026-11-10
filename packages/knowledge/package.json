@@ -1,0 +1,26 @@
+{
+  "name": "@aesthra/knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aesthra/analysis": "workspace:*",
+    "@aesthra/core": "workspace:*",
+    "@aesthra/ingestion": "workspace:*",
+    "@aesthra/memory": "workspace:*",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  }
+}
+
