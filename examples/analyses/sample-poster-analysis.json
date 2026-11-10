@@ -1,0 +1,85 @@
+{
+  "analyzer": "user-structured-import",
+  "analyzerVersion": "1.0.0",
+  "observations": [
+    {
+      "dimension": "composition",
+      "statement": "Upper 55% of the 600x800 portrait canvas remains unbroken dark charcoal background while the primary structural blocks sit anchored in the lower-left quadrant.",
+      "evidenceType": "user_observation",
+      "evidenceRef": "examples/references/sample-poster.png"
+    },
+    {
+      "dimension": "color",
+      "statement": "Palette is limited to three flat tones: deep charcoal ground (#181A1F), warm cream block (#EAE3D2), and a narrow terracotta accent bar (#C85A32).",
+      "evidenceType": "user_observation",
+      "evidenceRef": "examples/references/sample-poster.png"
+    },
+    {
+      "dimension": "technical",
+      "statement": "Synthetic architectural poster fixture rendered at 600x800 pixels in 3:4 portrait aspect ratio.",
+      "evidenceType": "technical_metadata",
+      "evidenceRef": "examples/references/sample-poster.png"
+    }
+  ],
+  "interpretations": [
+    {
+      "dimension": "composition",
+      "statement": "Heavy vertical offset gives the lower foreground block gravitational weight while keeping the top half calm and uncrowded.",
+      "rationale": "Concentration of mass below the horizontal midline reinforces stability without symmetrical rigidity.",
+      "evidenceType": "user_interpretation"
+    },
+    {
+      "dimension": "emotionalTone",
+      "statement": "Restrained industrial quietness punctuated by a single deliberate focal accent.",
+      "rationale": "Restricting high-chroma terracotta to less than 4% of total area creates contrast without visual noise.",
+      "evidenceType": "user_interpretation"
+    }
+  ],
+  "confidence": 0.88,
+  "uncertainty": [
+    "Sample fixture omits live typography so type pairing behavior cannot be directly verified from pixels alone."
+  ],
+  "extractedPatterns": [
+    {
+      "name": "Lower-Third Gravitational Anchor",
+      "category": "patterns",
+      "domain": "graphic-design",
+      "summary": "Anchoring primary visual mass in the lower-left third while leaving the upper field unbroken to establish calm vertical tension.",
+      "principle": "Placing primary visual mass below the vertical center and slightly off the central axis leverages perceived gravity while preserving an expansive upper silence zone.",
+      "whyItWorks": "Viewers perceive weighted elements near the base as grounded, allowing the empty upper expanse to feel intentional and architectural rather than unpopulated.",
+      "useCases": [
+        "Exhibition and cultural posters where title weight sits below atmospheric headroom",
+        "Hero product frames requiring clean overlay room at the top of the viewport"
+      ],
+      "constraints": [
+        "Requires clear horizontal alignment rails near the base so anchored blocks do not feel dropped accidentally."
+      ],
+      "commonMistakes": [
+        "Floating secondary elements mid-canvas that break the uninterrupted upper negative zone."
+      ],
+      "tags": ["composition", "poster", "gravity", "negative-space", "asymmetry"],
+      "confidence": 0.86
+    },
+    {
+      "name": "Restrained Single-Hue Accent Budget",
+      "category": "recipes",
+      "domain": "graphic-design",
+      "summary": "Combining a quiet neutral surface pair with a tightly rationed chromatic accent bar (<5% canvas area) to direct immediate focal entry.",
+      "principle": "When 95%+ of a composition sits inside low-saturation neutral tones, even a modest geometric slice of warm saturated pigment commands primary attention without aggressive scale.",
+      "whyItWorks": "Chromatic isolation triggers pre-attentive pop-out only when surrounding chroma stays disciplined.",
+      "useCases": [
+        "Editorial posters and print cards seeking crisp focal signposting with minimal palette complexity",
+        "UI callouts or chapter markers in documentation and brand books"
+      ],
+      "constraints": [
+        "Loses potency immediately if multiple competing accent hues appear on the same spread."
+      ],
+      "commonMistakes": [
+        "Repeating the accent color across borders, icons, and backgrounds until the focal hierarchy flattens."
+      ],
+      "tags": ["color", "accent", "contrast", "minimalism", "recipe"],
+      "confidence": 0.84
+    }
+  ]
+}
+
