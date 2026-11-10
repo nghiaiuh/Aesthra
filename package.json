@@ -1,0 +1,44 @@
+{
+  "name": "aesthra",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aesthra — Intelligence Shaped by Taste. An extensible personal creative intelligence system for AI agents.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "tsc -b --clean",
+    "typecheck": "tsc -b && pnpm -r typecheck && tsc -p tsconfig.tools.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "brain": "tsx --conditions=development apps/cli/src/index.ts",
+    "sync:skills": "tsx --conditions=development scripts/sync-skills.ts",
+    "validate:skills": "tsx --conditions=development scripts/validate-skills.ts"
+  },
+  "devDependencies": {
+    "@aesthra/analysis": "workspace:*",
+    "@aesthra/core": "workspace:*",
+    "@aesthra/ingestion": "workspace:*",
+    "@aesthra/knowledge": "workspace:*",
+    "@aesthra/memory": "workspace:*",
+    "@aesthra/retrieval": "workspace:*",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.15.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0",
+    "yaml": "^2.9.1"
+  }
+}

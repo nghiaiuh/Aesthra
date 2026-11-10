@@ -1,0 +1,32 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+
+# Environment and local configuration
+.env
+.env.local
+.env.*.local
+
+# Logs and OS artifacts
+*.log
+.DS_Store
+Thumbs.db
+
+# Generated agent skill mirrors (canonical source lives in skills/)
+.claude/skills/
+.agents/skills/
+
+# Private user references, analyses, collections, and pending inbox items
+# Keep user-specific reference data out of Git by default.
+references/catalog/*
+!references/catalog/.gitkeep
+references/analyses/*
+!references/analyses/.gitkeep
+references/collections/*
+!references/collections/.gitkeep
+references/assets/
+learning/inbox/*
+!learning/inbox/.gitkeep
+
